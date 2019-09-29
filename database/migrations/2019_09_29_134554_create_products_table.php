@@ -26,7 +26,7 @@ class CreateProductsTable extends Migration
             $table->text('weight', 50)->nullable();
             $table->integer('stock');
             $table->tinyInteger('featured');
-            $table->enum('status', ['Publish', 'Draft', 'Inactive'])->nullable();
+            $table->enum('status', ['Publish', 'Draft', 'Inactive'])->default('Publish');
             $table->timestamps();
         });
     }
